@@ -1,3 +1,5 @@
+import wollok.game.*
+
 object corsa {
 	var position 
 	
@@ -16,7 +18,11 @@ object corsa {
 		position = position.down(1)
 	}
 	method derecha(){
+		if(position.x() <= game.width()-1 ){
 		position = position.right(1)
+		}
+		else
+			position = game.at(0, position.y())
 	}
 	method izquierda(){
 		position = position.left(1)
