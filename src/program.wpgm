@@ -1,0 +1,30 @@
+import wollok.game.*
+import autos.*
+
+program juego {
+	game.height(12)
+	game.width(12)
+	game.title("Juego")
+	corsa.position(
+		game.at(
+			0.randomUpTo(
+				game.width()
+			), 
+			0.randomUpTo(
+				game.height()
+			)
+		)
+	)
+	game.addVisual(corsa)
+	kwid.position(
+		game.at(
+			0.randomUpTo(game.width()
+				
+			), 0.randomUpTo(
+				game.height()
+			)
+		)
+	)
+	game.addVisual(kwid)
+	game.start()
+}
